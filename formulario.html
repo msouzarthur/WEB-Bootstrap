@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="formulario.css" rel="stylesheet">
+<title>Formulários</title>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>Formulário Bootstrap</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-8">
+				<h3>Cadastre-se</h3>
+				<form>
+					<div class="form-group">
+						<label for="nome">Nome</label>
+						<input id="nome" type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="email">E-Mail</label>
+						<input id="email" type="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="senha">Senha</label>
+						<input id="senha" type="password" class="form-control">
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox">Aceito os termos do serviço.
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="opcoes">PHP
+						</label>
+						<label>
+							<input type="radio" name="opcoes">Java
+						</label>
+					</div>
+					<button type="submit" class="btn">Cadastrar</button>
+				</form>
+			</div>
+
+			<div class="col-sm-4">
+				<h3>Login</h3>
+				<div class="form-group">
+					<label for="email">E-Mail</label>
+					<input placeholder="Digite seu email" id="email" type="email" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="senha">Senha</label>
+					<input placeholder="Digite sua senha" id="senha" type="password" class="form-control">
+				</div>
+				<button type="submit" class="btn">Login</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

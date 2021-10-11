@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<title>ToolTip e PopOver</title>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>ToolTip e PopOver</h1>
+		</div>
+		<h3>ToolTip</h3>
+		<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Detalhes cima">
+			Tooltip on top
+		</button>
+		<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Detalhes direita">
+			Tooltip on right
+		</button>
+		<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Detalhes embaixo">
+			Tooltip on bottom
+		</button>
+		<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Detalhes esquerda">
+			Tooltip on left
+		</button>
+		<br><br>
+		<div class="btn-toolbar">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Play">
+					<img src="./bootstrapIcons/play-btn.svg">
+				</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Pause">
+					<img src="./bootstrapIcons/pause-btn.svg">
+				</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Stop">
+					<img src="./bootstrapIcons/stop-btn.svg">
+				</button>
+			</div>
+		</div>
+		<h3>PopOver</h3>
+		<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Titulo do popover" data-bs-content="PopOver em cima"
+		>Clique Para Abrir</button>
+		<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Titulo do popover" data-bs-content="PopOver direita"
+		>Clique Para Abrir</button>
+		<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" title="Titulo do popover" data-bs-content="PopOver esquerda"
+		>Clique Para Abrir</button>
+		<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" title="Titulo do popover" data-bs-content="PopOver embaixo"
+		>Clique Para Abrir</button>
+
+
+		<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Titulo do popover" data-bs-content="Clica em qualquer lugar e ele fecha">Clica e Fecha</a>
+
+	</div>
+
+	<!--Ativação do ToolTip-->
+	<script type="text/javascript" src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+			return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+		var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+		var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+			return new bootstrap.Popover(popoverTriggerEl)
+		})
+		var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+			trigger: 'focus'
+		})
+	</script>
+</body>
+</html>
